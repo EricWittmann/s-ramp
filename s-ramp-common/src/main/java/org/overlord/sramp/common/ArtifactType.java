@@ -396,4 +396,37 @@ public class ArtifactType {
         this.extendedDerivedType = extendedDerivedType;
     }
 
+    /**
+     * @see java.lang.Object#hashCode()
+     */
+    @Override
+    public int hashCode() {
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + ((artifactType == null) ? 0 : artifactType.hashCode());
+        result = prime * result + ((extendedType == null) ? 0 : extendedType.hashCode());
+        return result;
+    }
+    /**
+     * @see java.lang.Object#equals(java.lang.Object)
+     */
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        ArtifactType other = (ArtifactType) obj;
+        if (artifactType != other.artifactType)
+            return false;
+        if (extendedType == null) {
+            if (other.extendedType != null)
+                return false;
+        } else if (!extendedType.equals(other.extendedType))
+            return false;
+        return true;
+    }
+
 }
