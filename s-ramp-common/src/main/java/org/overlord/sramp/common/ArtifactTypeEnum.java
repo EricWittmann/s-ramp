@@ -41,6 +41,7 @@ import org.oasis_open.docs.s_ramp.ns.s_ramp_v1.Element;
 import org.oasis_open.docs.s_ramp.ns.s_ramp_v1.ElementDeclaration;
 import org.oasis_open.docs.s_ramp.ns.s_ramp_v1.Event;
 import org.oasis_open.docs.s_ramp.ns.s_ramp_v1.ExtendedArtifactType;
+import org.oasis_open.docs.s_ramp.ns.s_ramp_v1.ExtendedDocument;
 import org.oasis_open.docs.s_ramp.ns.s_ramp_v1.Fault;
 import org.oasis_open.docs.s_ramp.ns.s_ramp_v1.InformationType;
 import org.oasis_open.docs.s_ramp.ns.s_ramp_v1.Message;
@@ -121,7 +122,8 @@ public enum ArtifactTypeEnum {
 	ServiceInstance("serviceImplementation", "Service Instance", ServiceInstance.class, BaseArtifactEnum.SERVICE_INSTANCE, true),
 	ServiceOperation("serviceImplementation", "Service Operation", ServiceOperation.class, BaseArtifactEnum.SERVICE_OPERATION, true),
 	// Extented
-	ExtendedArtifactType("ext", "Extended", ExtendedArtifactType.class, BaseArtifactEnum.EXTENDED_ARTIFACT_TYPE, false), // TODO how are extended types contributed/registered?
+	ExtendedArtifactType("ext", "Extended Artifact", ExtendedArtifactType.class, BaseArtifactEnum.EXTENDED_ARTIFACT_TYPE, false),
+    ExtendedDocument("ext", "Extended Document", ExtendedDocument.class, BaseArtifactEnum.EXTENDED_DOCUMENT, false),
 	// SOA
 	HumanActor("soa", "SOA Human Actor", Actor.class, BaseArtifactEnum.ACTOR, true),
 	Choreography("soa", "SOA Choreography", Choreography.class, BaseArtifactEnum.CHOREOGRAPHY, true),
